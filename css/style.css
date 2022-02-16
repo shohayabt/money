@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* COMMON CSS START FROM HERE */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+main,
+header {
+    padding: 0px 5%;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 10px 0px;
+}
+
+#cal-button,#save-button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 10px 0px;
+    background: #59A5FF;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+hr{
+    margin: 10px 0px;
+    height: 3px;
+    background: blue;
+}
+/* HEADING SECTION START FROM HERE */
+#header {
+    padding: 30px 0px;
+    font-size: 30px;
+    color: #31A5AC;
+}
+
+#header .headline {
+    text-align: center;
+}
+
+/* HEADING SECTION END HERE */
+/* MAIN SECTION CSS START FROM HERE */
+#main-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+
+}
+
+#main-section .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-section .image img {
+    width: 100%;
+}
+
+#main-section .input-section {
+    background: #F8F8F8;
+    padding: 20px 30px;
+}
+
+#main-section .input-section h2 {
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* MAIN SECTION CSS END HERE */

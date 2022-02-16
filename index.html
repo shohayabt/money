@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP | MONEY MANAGEMENT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header"> 
+        <h1 class="headline">MONEY MANAGEMENT</h1>
+    </header>
+    <main id="main-section">
+        <div class="image">
+            <img src="images/money.jpg" alt="money is not everything">
+        </div>
+        <div class="input-section">
+            <h2>income</h2>
+            <form action="#" id="data-input">
+                <label for="income">income:</label>
+                <input type="number" id="income" name="income">
+                <hr>
+                <h2>Expenses</h2>
+                <label for="food">Food:</label>
+                <input type="number" id="food" name="food">
+                <label for="rent">rent:</label>
+                <input type="number" name="rent" id="rent">
+                <label for="others">others:</label>
+                <input type="number" name="others" id="others">
+                <button id="cal-button"> CALCULATE</button><br>
+                <hr>
+                <label for="total-expenses">Total Expenses:
+                </label>
+                <input type="number" name="total-expenses" id="total-expenses" disabled>
+                <label for="ballance">ballance:</label>
+                <input type="number" name="ballance" id="ballance" disabled>
+                <hr>
+                <label for="save">save:</label>
+                <input type="number" name="save" id="save">
+                <button id="save-button">SAVE</button>
+                <hr>
+                <label for="saving-amount">saving amount:</label>
+                <input type="number" name="saving-amount" id="saving-amount" disabled>
+                <label for="remaining-ballance">Remaining Ballance</label>
+                <input type="number" name="remaining-ballance" id="remaining-ballance" disabled>
+            </form>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
