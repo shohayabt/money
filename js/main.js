@@ -1,4 +1,4 @@
-// CALCULATING EXPENSES
+//FUNCTION OF  CALCULATING EXPENSES
 function expenses(){
     let food = document.getElementById('food').value;
         food = parseFloat(food);
@@ -9,17 +9,25 @@ function expenses(){
     let expenses = food + rent + others;
     return expenses;
 }
-
+// FUNCTION OF CALCULATING BALLANCE 
 function calculatingBallance(){
     let income = parseFloat(document.getElementById('income').value);
     const ballance = income - expenses();
     return ballance;
 }
+// FUNCTION OF SAVING MONEY
 function savingMoney(){
     let save = parseFloat(document.getElementById('save').value);
-    let remainingBallance = ballance * save/100;
+    let savingMoney = calculatingBallance() * save/100;
+    return savingMoney;
+}
+// REMMAINING BALLANCE FUNCTION 
+function remainingBallance(){
+    let remainingBallance = calculatingBallance() - savingMoney();
     return remainingBallance;
 }
+
+// CALCULATING INCOME BY CLICKING BUTTON
 const calculateButton = document.getElementById('cal-button');
 
 calculateButton.addEventListener('click', function () {
@@ -29,8 +37,10 @@ calculateButton.addEventListener('click', function () {
     document.getElementById('ballance').value = calculatingBallance();
 })
 
+// SAVING MONY BY CLICKING BUTTON
 const saveButton = document.getElementById('save-button');
 
 saveButton.addEventListener('click', function(){
     document.getElementById('saving-amount').value = savingMoney();
+    document.getElementById('remaining-ballance').value = remainingBallance();
 })
