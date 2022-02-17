@@ -73,7 +73,6 @@ hr{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
-
 }
 
 #main-section .image {
@@ -98,3 +97,18 @@ hr{
 }
 
 /* MAIN SECTION CSS END HERE */
+
+
+/* CSS FOR MOBILE DEVICES  */
+@media only screen and (max-width: 768px) {
+    #header {
+        font-size: 26px;
+    }
+    #main-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* CSS FOR MOBILE DEVICES  */
