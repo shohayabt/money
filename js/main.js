@@ -1,3 +1,8 @@
+// M0ST USEFULL VARIABLE HERE 
+const calculateButton = document.getElementById('cal-button');
+const saveButton = document.getElementById('save-button');
+
+
 //FUNCTION OF  CALCULATING EXPENSES
 function expenses(){
     let food = document.getElementById('food').value;
@@ -28,17 +33,21 @@ function remainingBallance(){
 }
 
 // CALCULATING INCOME BY CLICKING BUTTON
-const calculateButton = document.getElementById('cal-button');
 
 calculateButton.addEventListener('click', function () {
     document.getElementById('total-expenses').value = expenses(); //CALLING CREATED FUNCTION EXPENSES 
 
     // CALCULATING BALLANCE 
     document.getElementById('ballance').value = calculatingBallance();
+
+
+
+    // ACTIVE THE DISABLED SAVE MONEY BUTTON
+    saveButton.removeAttribute('disabled');
+    saveButton.style.background = '#59A5FF';
 })
 
 // SAVING MONY BY CLICKING BUTTON
-const saveButton = document.getElementById('save-button');
 
 saveButton.addEventListener('click', function(){
     document.getElementById('saving-amount').value = savingMoney();
