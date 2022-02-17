@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- HEADER SECTION START FROM HERE -->
     <header id="header"> 
         <h1 class="headline">MONEY MANAGEMENT</h1>
     </header>
+    <!-- HEADER SECTION END HERE -->
     <main id="main-section">
         <div class="image">
             <img src="images/money.jpg" alt="money is not everything">
         </div>
         <div class="input-section">
+            <!-- INCOME SECTION -->
             <h2>income</h2>
             <form action="#" id="data-input">
                 <input type="text" id="error-message" disabled>
                 <label for="income">income:</label>
                 <input type="number" id="income" name="income">
                 <hr>
+            <!-- INCOME SECTION END HERE -->
+            <!-- EXPENSES SECTION START FROM HERE -->
                 <h2>Expenses</h2>
                 <label for="food">Food:</label>
                 <input type="number" id="food" name="food">
@@ -30,15 +35,18 @@
                 <label for="others">others:</label>
                 <input type="number" name="others" id="others">
                 <button id="cal-button" type="button"> CALCULATE</button>
+            <!-- EXPENSES SECTION END HERE  -->
                 <br>
                 <hr>
+            <!-- SHOWING CALCULATION -->
                 <label for="total-expenses">Total Expenses:
                 </label>
                 <input type="number" name="total-expenses" id="total-expenses" disabled>
                 <label for="ballance">ballance:</label>
                 <input type="number" name="ballance" id="ballance" disabled>
+            <!-- SAVING MONEY START FROM HERE  -->
                 <hr>
-                <input type="text" name="error-message-save" id="error-message-save">
+                <input type="text" name="error-message-save" id="error-message-save" disabled>
                 <label for="save">save %</label>
                 <input type="number" name="save" id="save">
                 <button id="save-button"type="button" disabled>SAVE</button>

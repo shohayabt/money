@@ -49,12 +49,20 @@ function savingMoney() {
     let save = document.getElementById('save').value;
     save = emptyError(save);
     if (typeof(save) == "string" || save < 0) {
-        let errorMessage = false;
+        let errorMessage = '';
         return errorMessage;
     } else {
-        let savingMoney = calculatingBallance() * (save / 100);
+        let income = document.getElementById('income').value;
+        income = emptyError(income);
+        if (typeof(income) == "string") {
+            let errorMessage = '';
+            return errorMessage;
+        }
+        else {
+            let savingMoney = income * (save / 100);
         
-        return savingMoney;
+            return savingMoney;
+        }
     }
 }
 // REMMAINING BALLANCE FUNCTION 
@@ -77,6 +85,7 @@ calculateButton.addEventListener('click', function () {
         errorMessageShow.value = "PLEASE! ENTER A VALID NUMBER.";
         document.getElementById('total-expenses').value = '';
         document.getElementById('ballance').value = '';
+        document.getElementById('save').value = '';
     }
     else if (typeof(calculatingBallance()) == "string") {
         let errorMessageShow = document.getElementById('error-message');
@@ -84,6 +93,7 @@ calculateButton.addEventListener('click', function () {
         errorMessageShow.value = "YOUR EXPENSES IS MORE THAN YOUR INCOME OR INCOME IS EMPTY";
         document.getElementById('total-expenses').value = '';
         document.getElementById('ballance').value = '';
+        document.getElementById('save').value = '';
     }
     else {
         //CALLING CREATED FUNCTION EXPENSES 
@@ -97,6 +107,8 @@ calculateButton.addEventListener('click', function () {
         // ACTIVE THE DISABLED SAVE MONEY BUTTON
         saveButton.removeAttribute('disabled');
         saveButton.style.background = '#59A5FF';
+        // EMPTY THE FILD
+        document.getElementById('save').value = '';
     }
 })
 
