@@ -62,7 +62,11 @@ hr{
 #header .headline {
     text-align: center;
 }
-
+#error-message ,#error-message-save{
+    color: red;
+    display: none;
+    text-transform: uppercase;
+}
 /* HEADING SECTION END HERE */
 /* MAIN SECTION CSS START FROM HERE */
 #main-section {
